@@ -1,4 +1,3 @@
-# Python
 from bluepy.btle import Scanner
 
 scanner = Scanner()
