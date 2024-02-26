@@ -15,7 +15,7 @@ while True:
         if adtype == 22 :
           Battery = int(value[20:22], 16)
           Temperature = int(value[24:28], 16) / 100
-          Humidity = int(value[28:32], 16)
+          Humidity = int(value[28:32], 16) / 100
 
           print("Battery : ", Battery, " %")
           print("Temperature : ", Temperature, " °C")
