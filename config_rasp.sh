@@ -8,10 +8,11 @@ sudo raspi-config nonint do_ssh 0
 sudo apt-get install vsftpd -y
 #////////////////////////////////////////////////
 
-#//////// Python download ////////
+#//////// Download ////////
 sudo apt install python3 -y
 sudo apt install python3-pip -y
 sudo pip install bluepy
+sudo apt install mariadb-serveur
 #////////////////////////////////////////////////
 
 sudo python3 meteo.py
