@@ -1,0 +1,39 @@
+from flask import Flask, jsonify
+import mysql.connector
+
+app = Flask(__name__)
+
+# Configuration de la connexion à la base de données MariaDB
+db_config = {
+    'host': 'localhost',
+    'user': 'votre_utilisateur',
+    'password': 'votre_mot_de_passe',
+    'database': 'votre_base_de_donnees'
+}
+
+# Fonction pour exécuter une requête SQL et récupérer les résultats
+def execute_query(query):
+    connection = mysql.connector.connect(**db_config)
+    cursor = connection.cursor(dictionary=True)
+    cursor.execute(query)
+    result = cursor.fetchone()
+    cursor.close()
+    connection.close()
+    return result
+
+@app.route('/get_temperature_and_humidity')
+def get_temperature_and_humidity():
+    # Exécutez une requête SQL pour obtenir les données de température et d'humidité
+    query = "SELECT temperature, humidity FROM capteur_data ORDER BY timestamp DESC LIMIT 1"
+    result = execute_query(query)
+    return jsonify(result)
+
+@app.route('/get_battery_level')
+def get_battery_level():
+    # Exécutez une requête SQL pour obtenir le niveau de batterie
+    query = "SELECT battery_level FROM capteur_data ORDER BY timestamp DESC LIMIT 1"
+    result = execute_query(query)
+    return jsonify(result)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
