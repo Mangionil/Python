@@ -1,7 +1,19 @@
 from bluepy.btle import Scanner
 from peewee import MySQLDatabase, Model, CharField, IntegerField
 
-db = MySQLDatabase('msql', user=pi, password=raspberry, host='localhost')
+db = MySQLDatabase('msql', user='pi', password='raspberry', host='localhost')
+
+class Data(Model):
+    temperature = FloatField()
+    humidite = FloatField()
+    battery = FloatField()
+
+    class Meta:
+        database = db
+
+db.connect()
+db.create_tables([Data])
+db.close()
 
 scanner = Scanner()
 print("Begin device scan")
