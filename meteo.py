@@ -1,5 +1,5 @@
 from bluepy.btle import Scanner
-from peewee import MySQLDatabase, Model, CharField, IntegerField
+from peewee import MySQLDatabase, Model, CharField, IntegerField, FloatField
 
 db = MySQLDatabase('msql', user='pi', password='raspberry', host='localhost')
 
