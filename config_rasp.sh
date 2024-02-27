@@ -13,7 +13,7 @@ sudo apt install python3 -y
 sudo apt install python3-pip -y
 sudo pip install bluepy
 sudo pip install peewee
-sudo apt install mariadb-serveur
+sudo apt install mariadb-server
 #////////////////////////////////////////////////
 
 sudo python3 meteo.py
