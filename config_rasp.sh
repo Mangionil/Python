@@ -16,5 +16,11 @@ sudo pip install peewee
 sudo apt install mariadb-server
 sudo pip install pymysql
 #////////////////////////////////////////////////
+
+#//////// Creat DB SQL ////////
+sudo mysql -uroot -p
+mysql -u pi -p raspberry -e ""
+#////////////////////////////////////////////////
+
 sudo pip install flask
 sudo python3 meteo.py
