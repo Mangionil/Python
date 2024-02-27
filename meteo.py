@@ -1,4 +1,7 @@
 from bluepy.btle import Scanner
+from peewee import MySQLDatabase, Model, CharField, IntegerField
+
+db = MySQLDatabase('msql', user='pi', password='raspberry', host='localhost')
 
 scanner = Scanner()
 print("Begin device scan")
