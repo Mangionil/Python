@@ -24,7 +24,6 @@ sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON msql.* TO 'pi'@'localhost';"
 sudo mysql -uroot -e "FLUSH PRIVILEGES;"
 #////////////////////////////////////////////////
 
-sudo pip install flask
 sudo python3 meteo.py
 
 #//////// Flask ////////
