@@ -24,3 +24,11 @@ mysql -u pi -p raspberry -e ""
 
 sudo pip install flask
 sudo python3 meteo.py
+
+#//////// Flask ////////
+mkdir myproject
+cd myproject
+python3 -m venv .venv
+. .venv/bin/activate
+pip install Flask
+#////////////////////////////////////////////////
