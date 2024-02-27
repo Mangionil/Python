@@ -14,6 +14,7 @@ sudo apt install python3-pip -y
 sudo pip install bluepy
 sudo pip install peewee
 sudo apt install mariadb-server
+sudo pip install pymysql
 #////////////////////////////////////////////////
 
 sudo python3 meteo.py
