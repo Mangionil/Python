@@ -18,8 +18,10 @@ sudo pip install pymysql
 #////////////////////////////////////////////////
 
 #//////// Creat DB SQL ////////
-sudo mysql -uroot -p
-mysql -u pi -p raspberry -e ""
+sudo mysql -uroot -e "CREATE DATABASE msql;"
+sudo mysql -uroot -e "CREATE USER 'pi'@'localhost' IDENTIFIED BY 'raspberry';"
+sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON msql.* TO 'pi'@'localhost';"
+sudo mysql -uroot -e "FLUSH PRIVILEGES;"
 #////////////////////////////////////////////////
 
 sudo pip install flask
