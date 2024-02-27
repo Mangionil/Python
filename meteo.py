@@ -1,5 +1,6 @@
 from bluepy.btle import Scanner
-from peewee import MySQLDatabase, Model, CharField, IntegerField, FloatField
+from peewee import MySQLDatabase, Model, CharField, IntegerField, FloatField, DateTimeField
+import datetime
 
 db = MySQLDatabase("msql", user="pi", password="raspberry", host="localhost")
 
@@ -8,6 +9,8 @@ class Data(Model):
     temperature = FloatField()
     humidity = FloatField()
     battery = FloatField()
+    mac_address = CharField()
+    timestamp = DateTimeField(default=datetime.datetime.now)
 
     class Meta:
         database = db
@@ -42,4 +45,4 @@ while True:
                     print("Temperature : ", Temperature, " °C")
                     print("Humidity : ", Humidity, " %")
 
-                    Data.create(temperature=Temperature, battery=Battery, humidity=Humidity)
+                    Data.create(temperature=Temperature, battery=Battery, humidity=Humidity, mac_address=device.addr)
