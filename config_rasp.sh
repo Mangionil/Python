@@ -1,6 +1,6 @@
 #//////// Activation of SSH and FTP ////////
 sudo raspi-config nonint do_ssh 0
-sudo apt-get install vsftpd -y
+sudo apt install vsftpd -y
 #////////////////////////////////////////////////
 
 #//////// Download ////////
