@@ -8,10 +8,10 @@ sudo apt install python3 -y
 sudo apt install python3-pip -y
 python3 -m venv .venv
 . .venv/bin/activate
-sudo pip install bluepy
-sudo pip install peewee
+pip install bluepy
+pip install peewee
 sudo apt install mariadb-server -y
-sudo pip install pymysql
+pip install pymysql
 #////////////////////////////////////////////////
 
 #//////// Creat DB SQL ////////
@@ -21,7 +21,7 @@ sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON msql.* TO 'pi'@'localhost';"
 sudo mysql -uroot -e "FLUSH PRIVILEGES;"
 #////////////////////////////////////////////////
 
-sudo python3 meteo.py
+sudo venv/bin/python meteo.py
 
 #//////// Flask ////////
 mkdir myproject
