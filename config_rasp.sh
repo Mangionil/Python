@@ -22,7 +22,7 @@ sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON msql.* TO 'pi'@'localhost';"
 sudo mysql -uroot -e "FLUSH PRIVILEGES;"
 #////////////////////////////////////////////////
 
-sudo .venv/bin/python meteo.py
+sudo .venv/bin/python meteo.py &
 
 #//////// Flask ////////
 mkdir myproject
