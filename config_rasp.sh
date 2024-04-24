@@ -1,8 +1,3 @@
-#//////// Os update ////////
-sudo apt update -y
-sudo apt upgrade -y
-#////////////////////////////////////////////////
-
 #//////// Activation of SSH and FTP ////////
 sudo raspi-config nonint do_ssh 0
 sudo apt-get install vsftpd -y
