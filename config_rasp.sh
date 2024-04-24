@@ -6,6 +6,7 @@ sudo apt install vsftpd -y
 #//////// Download ////////
 sudo apt install python3 -y
 sudo apt install python3-pip -y
+sudo apt install libglib2.0-dev -y
 python3 -m venv .venv
 . .venv/bin/activate
 pip install bluepy
