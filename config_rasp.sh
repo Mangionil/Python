@@ -10,7 +10,7 @@ python3 -m venv .venv
 . .venv/bin/activate
 sudo pip install bluepy
 sudo pip install peewee
-sudo apt install mariadb-server
+sudo apt install mariadb-server -y
 sudo pip install pymysql
 #////////////////////////////////////////////////
 
